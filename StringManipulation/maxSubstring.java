@@ -1,6 +1,8 @@
+package DSA_CHALLENGE.StringManipulation;
+
 import java.util.Arrays;
 
-public class Solve {
+public class maxSubstring {
 
     public static void main(String[] args) {
         String str = "010111";

@@ -1,3 +1,5 @@
+package DSA_CHALLENGE.Sorting;
+
 public class mergeSort2 {
     public void MergeSort(int[] arr){
         int s= 0;
@@ -17,6 +19,7 @@ public class mergeSort2 {
         int i = s , j = mid + 1;
         while(i <= mid || j <= e){
             int arr1Number = (s <= mid) ? arr[i] : Integer.MAX_VALUE;
+            i++;
         }
     }
 }

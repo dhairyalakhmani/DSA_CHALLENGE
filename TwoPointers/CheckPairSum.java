@@ -1,5 +1,7 @@
+package DSA_CHALLENGE.TwoPointers;
+
 import java.util.Arrays;
-public class checkPairSum {
+public class CheckPairSum {
     public static void main(String[] args) {
         int[] arr = {4, 5 , 2 ,6, 2,6,8,8,443,72,2,73,637,3,6};
 //         6 7 9 10 12 15

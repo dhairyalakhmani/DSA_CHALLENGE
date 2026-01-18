@@ -1,3 +1,5 @@
+package DSA_CHALLENGE.Recursion;
+
 import java.util.ArrayList;
 
 public class grayCode {

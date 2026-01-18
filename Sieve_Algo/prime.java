@@ -1,4 +1,6 @@
-public class primeNumbers {
+package DSA_CHALLENGE.Sieve_Algo;
+
+public class prime {
     public static void main(String[] args) {
         int N = 6;
         int[] ans = new int[6];

@@ -1,3 +1,5 @@
+package DSA_CHALLENGE.Sorting;
+
 import java.util.Arrays;
 
 public class mergeSort {

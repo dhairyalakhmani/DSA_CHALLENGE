@@ -1,3 +1,5 @@
+package DSA_CHALLENGE.Sorting;
+
 public class BubbleSort {
     public static void main(String[] args) {
         int[] arr = {4,72,22,8,1,7};
