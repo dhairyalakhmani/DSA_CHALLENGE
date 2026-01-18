@@ -1,3 +1,5 @@
+package DSA_CHALLENGE.Recursion;
+
 public class linearSearchUsingRecursion {
     public static boolean search(int[] arr , int target){
         return ls(arr , target , 0);

@@ -1,3 +1,5 @@
+package DSA_CHALLENGE.Recursion;
+
 public class wordSearch {
     public boolean exists(char[][] board , String word){
         int n = board.length;

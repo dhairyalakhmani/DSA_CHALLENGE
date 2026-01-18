@@ -1,3 +1,5 @@
+package DSA_CHALLENGE.Recursion;
+
 public class PowerOf2 {
     static int a = 1;
     public static boolean isPowerOfTwo(int n) {

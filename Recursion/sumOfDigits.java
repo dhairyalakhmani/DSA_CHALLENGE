@@ -1,3 +1,5 @@
+package DSA_CHALLENGE.Recursion;
+
 public class sumOfDigits {
     private static int sum( int n) {
         if(n <= 0) return n % 10;
