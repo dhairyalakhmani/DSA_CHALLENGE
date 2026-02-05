@@ -1,0 +1,17 @@
+package DSA_CHALLENGE.BitManipulation;
+
+public class MagicNumber {
+    public static int magic(int n){
+        int sum = 0;
+        for(int i = 0 ; i < 32 ; i++){
+            if((n & (1 << i)) != 0)
+                sum += (int) Math.pow(5 , i + 1);
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        int n = 10;
+        System.out.println(magic(n));
+    }
+}

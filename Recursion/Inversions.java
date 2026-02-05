@@ -1,11 +1,11 @@
 package DSA_CHALLENGE.Recursion;
 
 public class Inversions {
-    public void inversionCount(int[] arr) {
-        sort(arr, 0, arr.length - 1);
+    public static int inversionCount(int[] arr) {
+        return sort(arr, 0, arr.length - 1);
     }
 
-    public int sort(int[] arr, int start, int end) {
+    public static int sort(int[] arr, int start, int end) {
         int inversions = 0;
         int mid = (start + end) / 2;
         if (start < end) {
@@ -16,7 +16,8 @@ public class Inversions {
         return inversions;
     }
 
-    public int merge(int[] arr, int start, int mid, int end) {
+    public static int merge(int[] arr, int start, int mid, int end) {
+        System.out.println("Start: " + start + " End: " + end + " Mid: " + mid);
         int inversions = 0;
         int[] temp = new int[end - start + 1];
         int i = start, j = mid + 1;
@@ -43,10 +44,14 @@ public class Inversions {
             j++;
             k++;
         }
-        for (int b = start; b <= end; b++) {
+        for (int b = 0; b < temp.length ; b++) {
             arr[start + b] = temp[b];
         }
         return inversions;
     }
 
+    public static void main(String[] args) {
+        int[] arr = {5 ,4, 1, 2, 5, 9, 10 ,8};
+        System.out.println(inversionCount(arr));
+    }
 }
