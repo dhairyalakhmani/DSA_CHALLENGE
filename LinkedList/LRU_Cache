@@ -1,0 +1,69 @@
+public class Solution {
+    private Map<Integer , ListNode> map;
+    int capacity;
+    ListNode head;
+    ListNode tail;
+    public Solution(int capacity) {
+        this.capacity = capacity;
+        map = new HashMap<>();
+        head = new ListNode(0 , 0);
+        tail = new ListNode(0 , 0);
+        head.next = tail;
+        tail.prev = head;
+    }
+
+    private void addNode(ListNode node){
+        node.next = head.next;
+        node.prev = head;
+        head.next.prev = node;
+        head.next = node;
+    }
+
+    private void removeNode(ListNode node){
+        node.prev.next = node.next;
+        node.next.prev = node.prev;
+    }
+    
+    public int get(int key) {
+        if(!map.containsKey(key)) return -1;
+        else{
+            ListNode node = map.get(key);
+            removeNode(node);
+            addNode(node);
+            return node.value;
+        }
+    }
+    
+    public void set(int key, int value) {
+        if(map.containsKey(key)){
+            ListNode node = map.get(key);
+            node.value = value;
+            removeNode(node);
+            addNode(node);
+        }
+        else{
+            ListNode newNode = new ListNode(key , value);
+            map.put(key , newNode);
+            addNode(newNode);
+            if(map.size() > capacity){
+                ListNode remove = tail.prev;
+                removeNode(remove);
+                map.remove(remove.key);
+            }
+        }
+    }
+}
+
+class ListNode {
+    int key;
+    int value;
+    ListNode next;
+    ListNode prev;
+
+    ListNode(int key , int value){
+        this.key = key;
+        this.value = value;
+        next = null;
+        prev = null;
+    }
+}
